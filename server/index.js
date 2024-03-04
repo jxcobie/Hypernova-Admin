@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ 'limit': '30mb', 'extended': true }));
 
 
 function getAllowedOrigin(req) {
-    const frontendDomain = process.env.FRONTEND_DOMAIN; // Get from environment variable
+    const frontendDomain = "http://http://123.45.67.89:3000"; // Get from environment variable
     if (frontendDomain) {
       return frontendDomain;
     } else {
@@ -35,7 +35,7 @@ app.use('/inspections', inspectionRoutes);
 
 
 
-const dbURI = process.env.DATABASE_URL; // For local MongoDB
+const dbURI = "mongodb+srv://jxcobcreations:YOUssef10@cluster0.drufggw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // For local MongoDB
 const port = 5000;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
