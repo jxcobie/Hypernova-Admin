@@ -35,7 +35,7 @@ app.use('/inspections', inspectionRoutes);
 
 
 
-const dbURI = 'mongodb+srv://jxcobcreations:gTuLrcYujZr4HYia@cluster0.drufggw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // For local MongoDB
+const dbURI = process.env.DATABASE_URL; // For local MongoDB
 const port = 5000;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
