@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an instance of Axios with a custom baseURL
 const axiosInstance = axios.create({
-  baseURL: 'https://servitech-server.onrender.com', // Replace 'yourPort' with the actual port number
+  baseURL: process.env.BACKEND_URL, // Replace 'yourPort' with the actual port number
 });
 
 // Action Types
